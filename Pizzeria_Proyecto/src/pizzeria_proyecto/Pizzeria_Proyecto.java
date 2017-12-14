@@ -16,6 +16,9 @@ public class Pizzeria_Proyecto {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Main miVentana=new Main();
+        miVentana.setVisible(true);
+        miVentana.setEnabled(true);
     }
     
 }
