@@ -7,7 +7,7 @@ public class Pizza extends Productos {
     private String Tipo_Pizza;
 
     public Pizza(String NombrePro, float Precio) {
-        super();
+        super(NombrePro, Precio);
     }
     
 }
