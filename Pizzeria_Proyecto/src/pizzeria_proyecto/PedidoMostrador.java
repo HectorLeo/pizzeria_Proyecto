@@ -5,6 +5,17 @@
  */
 package pizzeria_proyecto;
 
+import BDD.ConexionDB;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author snakt
@@ -16,6 +27,33 @@ public class PedidoMostrador extends javax.swing.JFrame {
      */
     public PedidoMostrador() {
         initComponents();
+    }
+    
+    void mostrar_datos(){
+  
+    DefaultTableModel modelo = new DefaultTableModel();
+    modelo.addColumn("NombreC");
+    
+    
+    //jTable1.setModel(modelo);
+    String sql = "select * from pmostrador";
+    String datos[]= new String [3];
+    
+        //Statement st;
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                datos[0]=rs.getString(1);
+                      
+                        
+                modelo.addRow(datos);
+            }
+             //jTable1.setModel(modelo);
+             } catch (SQLException ex) {
+            Logger.getLogger(PedidoMostrador.class.getName()).log(Level.SEVERE, null, ex);
+        }  
+    
     }
 
     /**
@@ -37,6 +75,11 @@ public class PedidoMostrador extends javax.swing.JFrame {
         jLabel1.setText("Nombre del Cliente");
 
         jButtonAceptar.setText("Aceptar");
+        jButtonAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAceptarMouseClicked(evt);
+            }
+        });
         jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAceptarActionPerformed(evt);
@@ -98,6 +141,48 @@ public class PedidoMostrador extends javax.swing.JFrame {
         newFrame.setVisible(true);
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
+    private void jButtonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMouseClicked
+        // TODO add your handling code here:
+        
+        try {
+            PreparedStatement pps = cn.prepareStatement("insert into pmostrador(NombreC) values (?)");
+                    
+            /*if(Id.getText().length()==0)
+            {        
+             
+                pps.setString(1, Id.getText());       
+                Error.setVisible(true);
+                //Error.setText("Campo clave producto vacio");
+               
+                JOptionPane.showMessageDialog(null, "ID vacio");         
+            }                 
+            else */if(jTextFieldnomCliente.getText().length()==0)
+            {                
+                pps.setString(1, jTextFieldnomCliente.getText());
+                //Error.setVisible(true);
+                //Error.setText("Campo clave producto vacio");
+                JOptionPane.showMessageDialog(null, "Nombre vacio");
+            }     
+            
+            
+            
+            else{
+                        //pps.setString(1, Id.getText()); 
+                        pps.setString(1, jTextFieldnomCliente.getText()); 
+                        
+                         
+                        //pps.setString(5, ei.getText()); 
+                        pps.executeUpdate();
+                        JOptionPane.showMessageDialog(null, "Los datos se han guardado");
+                        
+                        mostrar_datos();
+            }
+                 
+        } catch (SQLException ex) {
+            Logger.getLogger(PedidoMostrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButtonAceptarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -139,4 +224,7 @@ public class PedidoMostrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextFieldnomCliente;
     // End of variables declaration//GEN-END:variables
+    
+    ConexionDB cc= new ConexionDB();
+    Connection cn= cc.conexion();
 }

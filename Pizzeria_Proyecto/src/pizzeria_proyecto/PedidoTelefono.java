@@ -182,9 +182,7 @@ public class PedidoTelefono extends javax.swing.JFrame {
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
         
-        /*this.setVisible(false);
-        CarpetaMenu newFrame= new CarpetaMenu();
-        newFrame.setVisible(true);*/
+        
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
     private void jButtonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMouseClicked
@@ -241,11 +239,15 @@ public class PedidoTelefono extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(PedidoTelefono.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
     }//GEN-LAST:event_jButtonAceptarMouseClicked
 
     private void jButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenuActionPerformed
         // TODO add your handling code here:
-        
+        this.setVisible(false);
+        CarpetaMenu newFrame= new CarpetaMenu();
+        newFrame.setVisible(true);
     }//GEN-LAST:event_jButtonMenuActionPerformed
 
     /**

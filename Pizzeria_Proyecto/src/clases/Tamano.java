@@ -4,7 +4,7 @@ package clases;
 
 public enum Tamano {
 
-    Mediana 
+    Mediana
     , Grande, Familiar
 }
  
