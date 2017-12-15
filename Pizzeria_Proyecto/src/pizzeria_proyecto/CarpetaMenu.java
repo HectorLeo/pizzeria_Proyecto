@@ -33,191 +33,172 @@ public class CarpetaMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel14 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jRbHawainaMediana = new javax.swing.JRadioButton();
-        jRbHawainaGrande = new javax.swing.JRadioButton();
-        jRbHawainaFamiliar = new javax.swing.JRadioButton();
-        jRbMexicanaMediana = new javax.swing.JRadioButton();
-        jRbMexicanaGrande = new javax.swing.JRadioButton();
-        jRbMexicanaFamiliar = new javax.swing.JRadioButton();
-        jRbPepeMediana = new javax.swing.JRadioButton();
-        jRbPepeGrande = new javax.swing.JRadioButton();
-        jRbPepeFamiliar = new javax.swing.JRadioButton();
-        jRbRefrescoManzanita = new javax.swing.JRadioButton();
-        jRbRefrescoSprite = new javax.swing.JRadioButton();
-        jRbRefrescoCoca = new javax.swing.JRadioButton();
-        jRbPapas = new javax.swing.JRadioButton();
-        jButtonRegresar = new javax.swing.JButton();
-        jButtonCancelar = new javax.swing.JButton();
-        jButtonAceptar = new javax.swing.JButton();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jCbFamiliarH = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jCbMedianaH = new javax.swing.JComboBox<>();
+        jCbGrandeH = new javax.swing.JComboBox<>();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jCbFamiliarM = new javax.swing.JComboBox<>();
+        jCbGrandeM = new javax.swing.JComboBox<>();
+        jCbMedianaM = new javax.swing.JComboBox<>();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jCbFamiliarP = new javax.swing.JComboBox<>();
+        jCbGrandeP = new javax.swing.JComboBox<>();
+        jCbMedianaP = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        Papas = new javax.swing.JComboBox<>();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jCbRefrescoC = new javax.swing.JComboBox<>();
+        jLabel38 = new javax.swing.JLabel();
+        jCbRefrescoSprite = new javax.swing.JComboBox<>();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jCbRefrescoManzanita = new javax.swing.JComboBox<>();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel14.setText("espacio");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 870, -1, -1));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
+        jLabel8.setText("jLabel8");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, -1, -1));
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
 
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, -1, -1));
+        jLabel11.setText("jLabel8");
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, -1, -1));
 
-        jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, -1, -1));
+        jLabel12.setText("jLabel8");
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        jLabel5.setText("$ 80");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
+        jCbFamiliarH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbFamiliarH, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, -1));
 
-        jLabel6.setText("$ 120");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, -1, -1));
+        jLabel9.setText("jLabel9");
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
-        jLabel7.setText("$ 150");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, -1, -1));
+        jLabel13.setText("jLabel13");
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        jLabel20.setText("$ 80");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
+        jLabel28.setText("jLabel28");
+        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
-        jLabel21.setText("$ 120");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, -1));
+        jCbMedianaH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbMedianaH, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
 
-        jLabel22.setText("$ 150");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
+        jCbGrandeH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbGrandeH, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
 
-        jLabel23.setText("$ 80");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, -1, -1));
+        jLabel29.setText("jLabel9");
+        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, -1, -1));
 
-        jLabel24.setText("$ 120");
-        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, -1, -1));
+        jLabel30.setText("jLabel13");
+        jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, -1, -1));
 
-        jLabel25.setText("$ 150");
-        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 350, -1, -1));
+        jLabel31.setText("jLabel28");
+        jPanel4.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
 
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, -1, -1));
+        jCbFamiliarM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbFamiliarM, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ImgPizza/hqdefault.jpg"))); // NOI18N
-        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+        jCbGrandeM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbGrandeM, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, -1, -1));
 
-        jLabel27.setText("jLabel1");
-        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+        jCbMedianaM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbMedianaM, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
 
-        jLabel17.setText("$ 18");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 450, -1, -1));
+        jLabel32.setText("jLabel9");
+        jPanel4.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
 
-        jLabel16.setText("$ 15");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
+        jLabel33.setText("jLabel13");
+        jPanel4.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, -1, -1));
 
-        jLabel15.setText("$ 20");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, -1, -1));
+        jLabel34.setText("jLabel28");
+        jPanel4.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
 
-        jLabel18.setText("papas");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 540, -1, -1));
+        jCbFamiliarP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbFamiliarP, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, -1, -1));
 
-        jLabel19.setText("$ 25");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 590, -1, -1));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 630, 10));
+        jCbGrandeP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbGrandeP, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
-        jRbHawainaMediana.setText("Mediana");
-        jRbHawainaMediana.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRbHawainaMedianaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jRbHawainaMediana, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
+        jCbMedianaP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(jCbMedianaP, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, -1, -1));
 
-        jRbHawainaGrande.setText("Grande");
-        getContentPane().add(jRbHawainaGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
+        jButton1.setText("Aceptar");
+        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
 
-        jRbHawainaFamiliar.setText("Familiar");
-        getContentPane().add(jRbHawainaFamiliar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
+        jButton2.setText("Cancelar");
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, -1, -1));
 
-        jRbMexicanaMediana.setText("Mediana");
-        getContentPane().add(jRbMexicanaMediana, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, -1, -1));
+        jButton3.setText("Generar Ticket");
+        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
-        jRbMexicanaGrande.setText("Grande");
-        getContentPane().add(jRbMexicanaGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, -1));
+        Papas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel4.add(Papas, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 180, -1, -1));
 
-        jRbMexicanaFamiliar.setText("Familiar");
-        jRbMexicanaFamiliar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRbMexicanaFamiliarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jRbMexicanaFamiliar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, -1));
+        jLabel47.setText("jLabel9");
+        jPanel4.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 180, -1, -1));
 
-        jRbPepeMediana.setText("Mediana");
-        getContentPane().add(jRbPepeMediana, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, -1, -1));
+        jLabel48.setText("jLabel8");
+        jPanel4.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, -1, -1));
 
-        jRbPepeGrande.setText("Grande");
-        getContentPane().add(jRbPepeGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, -1, -1));
+        jTabbedPane2.addTab("Pizzas", jPanel4);
 
-        jRbPepeFamiliar.setText("Familiar");
-        getContentPane().add(jRbPepeFamiliar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, -1, -1));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jRbRefrescoManzanita.setText("Manzanita");
-        getContentPane().add(jRbRefrescoManzanita, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, -1, -1));
+        jLabel35.setText("jLabel9");
+        jPanel5.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
-        jRbRefrescoSprite.setText("Sprite");
-        getContentPane().add(jRbRefrescoSprite, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, -1, -1));
+        jCbRefrescoC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel5.add(jCbRefrescoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
 
-        jRbRefrescoCoca.setText("Coca Cola");
-        jRbRefrescoCoca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRbRefrescoCocaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jRbRefrescoCoca, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, -1, -1));
+        jLabel38.setText("jLabel8");
+        jPanel5.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        jRbPapas.setText("A la franceza");
-        getContentPane().add(jRbPapas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 590, -1, -1));
+        jCbRefrescoSprite.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel5.add(jCbRefrescoSprite, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, -1, -1));
 
-        jButtonRegresar.setText("Regresar");
-        getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 620, -1, -1));
+        jLabel39.setText("jLabel8");
+        jPanel5.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, -1, -1));
 
-        jButtonCancelar.setText("Cancelar");
-        getContentPane().add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 620, -1, -1));
+        jLabel40.setText("jLabel9");
+        jPanel5.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, -1, -1));
 
-        jButtonAceptar.setText("Aceptar");
-        getContentPane().add(jButtonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, -1, -1));
+        jCbRefrescoManzanita.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel5.add(jCbRefrescoManzanita, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, -1, -1));
+
+        jLabel43.setText("jLabel8");
+        jPanel5.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, -1, -1));
+
+        jLabel44.setText("jLabel9");
+        jPanel5.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, -1, -1));
+
+        jTabbedPane2.addTab("Refrescos", jPanel5);
+
+        getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 420));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jRbHawainaMedianaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRbHawainaMedianaActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jRbHawainaMedianaActionPerformed
-
-    private void jRbRefrescoCocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRbRefrescoCocaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRbRefrescoCocaActionPerformed
-
-    private void jRbMexicanaFamiliarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRbMexicanaFamiliarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRbMexicanaFamiliarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,43 +237,45 @@ public class CarpetaMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAceptar;
-    private javax.swing.JButton jButtonCancelar;
-    private javax.swing.JButton jButtonRegresar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRbHawainaFamiliar;
-    private javax.swing.JRadioButton jRbHawainaGrande;
-    private javax.swing.JRadioButton jRbHawainaMediana;
-    private javax.swing.JRadioButton jRbMexicanaFamiliar;
-    private javax.swing.JRadioButton jRbMexicanaGrande;
-    private javax.swing.JRadioButton jRbMexicanaMediana;
-    private javax.swing.JRadioButton jRbPapas;
-    private javax.swing.JRadioButton jRbPepeFamiliar;
-    private javax.swing.JRadioButton jRbPepeGrande;
-    private javax.swing.JRadioButton jRbPepeMediana;
-    private javax.swing.JRadioButton jRbRefrescoCoca;
-    private javax.swing.JRadioButton jRbRefrescoManzanita;
-    private javax.swing.JRadioButton jRbRefrescoSprite;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JComboBox<String> Papas;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> jCbFamiliarH;
+    private javax.swing.JComboBox<String> jCbFamiliarM;
+    private javax.swing.JComboBox<String> jCbFamiliarP;
+    private javax.swing.JComboBox<String> jCbGrandeH;
+    private javax.swing.JComboBox<String> jCbGrandeM;
+    private javax.swing.JComboBox<String> jCbGrandeP;
+    private javax.swing.JComboBox<String> jCbMedianaH;
+    private javax.swing.JComboBox<String> jCbMedianaM;
+    private javax.swing.JComboBox<String> jCbMedianaP;
+    private javax.swing.JComboBox<String> jCbRefrescoC;
+    private javax.swing.JComboBox<String> jCbRefrescoManzanita;
+    private javax.swing.JComboBox<String> jCbRefrescoSprite;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JTabbedPane jTabbedPane2;
     // End of variables declaration//GEN-END:variables
 }
