@@ -28,25 +28,15 @@ public class CarpetaMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel14 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
-        jRadioButton17 = new javax.swing.JRadioButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton18 = new javax.swing.JRadioButton();
-        jRadioButton19 = new javax.swing.JRadioButton();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
@@ -54,27 +44,33 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jRadioButton6 = new javax.swing.JRadioButton();
         jLabel16 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
         jLabel15 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jRadioButton15 = new javax.swing.JRadioButton();
-        jButton6 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jRbHawainaMediana = new javax.swing.JRadioButton();
+        jRbHawainaGrande = new javax.swing.JRadioButton();
+        jRbHawainaFamiliar = new javax.swing.JRadioButton();
+        jRbMexicanaMediana = new javax.swing.JRadioButton();
+        jRbMexicanaGrande = new javax.swing.JRadioButton();
+        jRbMexicanaFamiliar = new javax.swing.JRadioButton();
+        jRbPepeMediana = new javax.swing.JRadioButton();
+        jRbPepeGrande = new javax.swing.JRadioButton();
+        jRbPepeFamiliar = new javax.swing.JRadioButton();
+        jRbRefrescoManzanita = new javax.swing.JRadioButton();
+        jRbRefrescoSprite = new javax.swing.JRadioButton();
+        jRbRefrescoCoca = new javax.swing.JRadioButton();
+        jRbPapas = new javax.swing.JRadioButton();
+        jButtonRegresar = new javax.swing.JButton();
+        jButtonCancelar = new javax.swing.JButton();
+        jButtonAceptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel14.setText("espacio");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 870, -1, -1));
-
-        jRadioButton1.setText("Familiar");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 630, 10));
 
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
@@ -85,17 +81,6 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, -1, -1));
 
-        jRadioButton7.setText("Mediana");
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jRadioButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
-
-        jRadioButton8.setText("Grande");
-        getContentPane().add(jRadioButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
-
         jLabel5.setText("$ 80");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
 
@@ -105,15 +90,6 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel7.setText("$ 150");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, -1, -1));
 
-        jRadioButton2.setText("Familiar");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, -1));
-
-        jRadioButton16.setText("Mediana");
-        getContentPane().add(jRadioButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, -1, -1));
-
-        jRadioButton17.setText("Grande");
-        getContentPane().add(jRadioButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, -1));
-
         jLabel20.setText("$ 80");
         getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
 
@@ -122,15 +98,6 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
         jLabel22.setText("$ 150");
         getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, -1, -1));
-
-        jRadioButton3.setText("Familiar");
-        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, -1, -1));
-
-        jRadioButton18.setText("Mediana");
-        getContentPane().add(jRadioButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, -1, -1));
-
-        jRadioButton19.setText("Grande");
-        getContentPane().add(jRadioButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, -1, -1));
 
         jLabel23.setText("$ 80");
         getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, -1, -1));
@@ -150,50 +117,101 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel27.setText("jLabel1");
         getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
 
-        jLabel17.setText("jLabel14");
+        jLabel17.setText("$ 18");
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 450, -1, -1));
 
-        jRadioButton6.setText("jRadioButton6");
-        getContentPane().add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, -1, -1));
-
-        jLabel16.setText("jLabel14");
+        jLabel16.setText("$ 15");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
 
-        jRadioButton5.setText("jRadioButton5");
-        getContentPane().add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, -1, -1));
-
-        jLabel15.setText("jLabel14");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, -1, -1));
-
-        jRadioButton4.setText("jRadioButton4");
-        getContentPane().add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, -1, -1));
+        jLabel15.setText("$ 20");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, -1, -1));
 
         jLabel18.setText("papas");
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 540, -1, -1));
 
-        jLabel19.setText("jLabel19");
+        jLabel19.setText("$ 25");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 590, -1, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 630, 10));
 
-        jRadioButton15.setText("jRadioButton15");
-        getContentPane().add(jRadioButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 590, -1, -1));
+        jRbHawainaMediana.setText("Mediana");
+        jRbHawainaMediana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRbHawainaMedianaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRbHawainaMediana, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
 
-        jButton6.setText("Regresar");
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 620, -1, -1));
+        jRbHawainaGrande.setText("Grande");
+        getContentPane().add(jRbHawainaGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
-        jButton5.setText("Cancelar");
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 620, -1, -1));
+        jRbHawainaFamiliar.setText("Familiar");
+        getContentPane().add(jRbHawainaFamiliar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
 
-        jButton4.setText("Aceptar");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, -1, -1));
+        jRbMexicanaMediana.setText("Mediana");
+        getContentPane().add(jRbMexicanaMediana, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, -1, -1));
+
+        jRbMexicanaGrande.setText("Grande");
+        getContentPane().add(jRbMexicanaGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, -1));
+
+        jRbMexicanaFamiliar.setText("Familiar");
+        jRbMexicanaFamiliar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRbMexicanaFamiliarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRbMexicanaFamiliar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, -1));
+
+        jRbPepeMediana.setText("Mediana");
+        getContentPane().add(jRbPepeMediana, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, -1, -1));
+
+        jRbPepeGrande.setText("Grande");
+        getContentPane().add(jRbPepeGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, -1, -1));
+
+        jRbPepeFamiliar.setText("Familiar");
+        getContentPane().add(jRbPepeFamiliar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, -1, -1));
+
+        jRbRefrescoManzanita.setText("Manzanita");
+        getContentPane().add(jRbRefrescoManzanita, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, -1, -1));
+
+        jRbRefrescoSprite.setText("Sprite");
+        getContentPane().add(jRbRefrescoSprite, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, -1, -1));
+
+        jRbRefrescoCoca.setText("Coca Cola");
+        jRbRefrescoCoca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRbRefrescoCocaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRbRefrescoCoca, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, -1, -1));
+
+        jRbPapas.setText("A la franceza");
+        getContentPane().add(jRbPapas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 590, -1, -1));
+
+        jButtonRegresar.setText("Regresar");
+        getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 620, -1, -1));
+
+        jButtonCancelar.setText("Cancelar");
+        getContentPane().add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 620, -1, -1));
+
+        jButtonAceptar.setText("Aceptar");
+        getContentPane().add(jButtonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+    private void jRbHawainaMedianaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRbHawainaMedianaActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+    }//GEN-LAST:event_jRbHawainaMedianaActionPerformed
+
+    private void jRbRefrescoCocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRbRefrescoCocaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRbRefrescoCocaActionPerformed
+
+    private void jRbMexicanaFamiliarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRbMexicanaFamiliarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRbMexicanaFamiliarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,9 +250,9 @@ public class CarpetaMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButtonAceptar;
+    private javax.swing.JButton jButtonCancelar;
+    private javax.swing.JButton jButtonRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -256,19 +274,19 @@ public class CarpetaMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton17;
-    private javax.swing.JRadioButton jRadioButton18;
-    private javax.swing.JRadioButton jRadioButton19;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JRadioButton jRbHawainaFamiliar;
+    private javax.swing.JRadioButton jRbHawainaGrande;
+    private javax.swing.JRadioButton jRbHawainaMediana;
+    private javax.swing.JRadioButton jRbMexicanaFamiliar;
+    private javax.swing.JRadioButton jRbMexicanaGrande;
+    private javax.swing.JRadioButton jRbMexicanaMediana;
+    private javax.swing.JRadioButton jRbPapas;
+    private javax.swing.JRadioButton jRbPepeFamiliar;
+    private javax.swing.JRadioButton jRbPepeGrande;
+    private javax.swing.JRadioButton jRbPepeMediana;
+    private javax.swing.JRadioButton jRbRefrescoCoca;
+    private javax.swing.JRadioButton jRbRefrescoManzanita;
+    private javax.swing.JRadioButton jRbRefrescoSprite;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

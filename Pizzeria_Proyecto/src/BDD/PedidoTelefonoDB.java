@@ -20,7 +20,7 @@ public class PedidoTelefonoDB {
         conexion.conexion();
     }
     
-    /*
+    
     public boolean vender(Cliente pedido){
         
         String sql = "INSERT INTO ptelefono (Id, NombreC, Telefono, Direccion) VALUES "
@@ -33,5 +33,5 @@ public class PedidoTelefonoDB {
         }
         return false;
     }
-    */
+    
 }
