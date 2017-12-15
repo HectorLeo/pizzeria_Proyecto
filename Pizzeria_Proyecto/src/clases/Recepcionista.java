@@ -1,3 +1,7 @@
+package clases;
+
+
+
 public class Recepcionista extends Empleado {
 
     public Recepcionista(String Nom_per, String Tel_per, String Direccion_per) {

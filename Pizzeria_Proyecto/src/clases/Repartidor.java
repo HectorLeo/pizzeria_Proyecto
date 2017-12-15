@@ -1,3 +1,7 @@
+package clases;
+
+
+
 public class Repartidor extends Empleado {
 
     private String Licencia_conducir;

@@ -1,3 +1,7 @@
+package clases;
+
+
+
 public class Mesero extends Empleado {
 
     public Mesero(String Nom_per, String Tel_per, String Direccion_per) {

@@ -1,3 +1,7 @@
+package clases;
+
+
+
 public abstract class Persona {
 
     private String Nom_per;

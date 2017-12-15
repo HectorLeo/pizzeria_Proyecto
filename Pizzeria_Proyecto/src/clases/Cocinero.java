@@ -1,3 +1,5 @@
+package clases;
+
 public class Cocinero extends Empleado {
 
     public Cocinero(String Nom_per, String Tel_per, String Direccion_per) {

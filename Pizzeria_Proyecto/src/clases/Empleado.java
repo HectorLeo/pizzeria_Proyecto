@@ -1,3 +1,7 @@
+package clases;
+
+
+
 public class Empleado extends Persona {
 
     private String CURP;
