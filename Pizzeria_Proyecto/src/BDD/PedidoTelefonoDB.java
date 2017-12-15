@@ -20,18 +20,18 @@ public class PedidoTelefonoDB {
         conexion.conexion();
     }
     
-    
+    /*
     public boolean vender(Cliente pedido){
         
         String sql = "INSERT INTO ptelefono (Id, NombreC, Telefono, Direccion) VALUES "
-                    + "("+conexion.getMaxId("ptelefono")+", "+pedido.getnom_per()+", "+pedido.getDireccion_per()+"," +pedido.gettel_per()+")";
+                    + "("+conexion.getMaxId("ptelefono")+", "+pedido.getnom_per()+", "+pedido.gettel_per()+"," +pedido.getDireccion_per()+")";
         System.out.println(sql);
         if(conexion.execute(sql) > 0) {
-            sql = "UPDATE ptelefono SET Id = "+(pedido.getnom_per() + pedido.getDireccion_per() + pedido.gettel_per())+" WHERE Id = "+pedido.getnom_per();
+            sql = "UPDATE ptelefono SET Id = "+(pedido.getnom_per() + pedido.gettel_per()+ pedido.getDireccion_per())+" WHERE Id = "+pedido.getnom_per();
             conexion.execute(sql);
             return true;
         }
         return false;
     }
-    
+    */
 }

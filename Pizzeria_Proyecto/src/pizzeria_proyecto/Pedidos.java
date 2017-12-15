@@ -50,6 +50,7 @@ public class Pedidos extends javax.swing.JFrame {
         getContentPane().add(jButtonMostrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtontelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtontelefonoActionPerformed
