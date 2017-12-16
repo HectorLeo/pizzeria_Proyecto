@@ -5,6 +5,9 @@
  */
 package pizzeria_proyecto;
 
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+
 /**
  *
  * @author snakt
@@ -16,11 +19,6 @@ public class CarpetaMenu extends javax.swing.JFrame {
      */
     public CarpetaMenu() {
         initComponents();
-        nump=(int) jCbMedianaH.getSelectedItem();
-        TotalHM=Mediana*nump;
-        CantidadHM=nump;
-        total=+total+TotalHM;
-        CantidadTotal=CantidadTotal+CantidadHM;
     }
 
     /**
@@ -31,7 +29,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
     
     int Mediana=80, Grande=120, Familiar=150, total=0,CantidadHM=0, CantidadHG=0,CantidadHF=0,
             CantidadTotal=0,CantidadMM=0 ,CantidadMG=0 , CantidadMF=0 ,CantidadPM=0,CantidadPG=0,CantidadPF=0
-            ,CantidadCoca=0, CantidadSprite=0, CantidadManzanita=0, CantidadPapas=0, nump=0,TotalHM=0,TotalHG=0
+            ,CantidadCoca=0, CantidadSprite=0, CantidadManzanita=0, CantidadPapas=0,TotalHM=0,TotalHG=0
             ,TotalHF=0,TotalMM=0,TotalMG=0,TotalMF=0,TotalM=0,TotalPM=0,TotalPG=0,TotalPF=0,TotalPapa=0,CantidadPapa=0
             ,Papa=30,TotalCoca=0,Coca=20,TotalSprite=0,Sprite=18,TotalManzanita=0,Manzanita=15;
     
@@ -50,7 +48,6 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jCbMedianaH = new javax.swing.JComboBox<>();
         jCbGrandeH = new javax.swing.JComboBox<>();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
@@ -70,6 +67,8 @@ public class CarpetaMenu extends javax.swing.JFrame {
         Papas = new javax.swing.JComboBox<>();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
+        Salida = new javax.swing.JTextField();
+        jCbMedianaH = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jCbRefrescoC = new javax.swing.JComboBox<>();
@@ -96,7 +95,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel12.setText("jLabel8");
         jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        jCbFamiliarH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbFamiliarH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         jCbFamiliarH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbFamiliarHActionPerformed(evt);
@@ -113,15 +112,12 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel28.setText("jLabel28");
         jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
-        jCbMedianaH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jCbMedianaH.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCbMedianaHActionPerformed(evt);
+        jCbGrandeH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
+        jCbGrandeH.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCbGrandeHMouseClicked(evt);
             }
         });
-        jPanel4.add(jCbMedianaH, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
-
-        jCbGrandeH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jCbGrandeH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbGrandeHActionPerformed(evt);
@@ -138,7 +134,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel31.setText("jLabel28");
         jPanel4.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
 
-        jCbFamiliarM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbFamiliarM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         jCbFamiliarM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbFamiliarMActionPerformed(evt);
@@ -146,7 +142,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         });
         jPanel4.add(jCbFamiliarM, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
-        jCbGrandeM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbGrandeM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         jCbGrandeM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbGrandeMActionPerformed(evt);
@@ -154,7 +150,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         });
         jPanel4.add(jCbGrandeM, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, -1, -1));
 
-        jCbMedianaM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbMedianaM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         jCbMedianaM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbMedianaMActionPerformed(evt);
@@ -171,7 +167,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel34.setText("jLabel28");
         jPanel4.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
 
-        jCbFamiliarP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbFamiliarP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         jCbFamiliarP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbFamiliarPActionPerformed(evt);
@@ -179,7 +175,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         });
         jPanel4.add(jCbFamiliarP, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, -1, -1));
 
-        jCbGrandeP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbGrandeP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         jCbGrandeP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbGrandePActionPerformed(evt);
@@ -187,7 +183,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         });
         jPanel4.add(jCbGrandeP, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
-        jCbMedianaP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbMedianaP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         jCbMedianaP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbMedianaPActionPerformed(evt);
@@ -196,6 +192,11 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jPanel4.add(jCbMedianaP, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, -1, -1));
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
 
         jButton2.setText("Cancelar");
@@ -204,7 +205,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jButton3.setText("Generar Ticket");
         jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
-        Papas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Papas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         Papas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PapasActionPerformed(evt);
@@ -218,6 +219,21 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel48.setText("jLabel8");
         jPanel4.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, -1, -1));
 
+        Salida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalidaActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 150, -1));
+
+        jCbMedianaH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
+        jCbMedianaH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCbMedianaHActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jCbMedianaH, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 30, -1));
+
         jTabbedPane2.addTab("Pizzas", jPanel4);
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -225,7 +241,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel35.setText("jLabel9");
         jPanel5.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
-        jCbRefrescoC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbRefrescoC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         jCbRefrescoC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbRefrescoCActionPerformed(evt);
@@ -236,7 +252,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel38.setText("jLabel8");
         jPanel5.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        jCbRefrescoSprite.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbRefrescoSprite.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         jCbRefrescoSprite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbRefrescoSpriteActionPerformed(evt);
@@ -250,7 +266,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel40.setText("jLabel9");
         jPanel5.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, -1, -1));
 
-        jCbRefrescoManzanita.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCbRefrescoManzanita.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         jCbRefrescoManzanita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCbRefrescoManzanitaActionPerformed(evt);
@@ -272,24 +288,19 @@ public class CarpetaMenu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCbMedianaHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbMedianaHActionPerformed
-
-        
-
-     }//GEN-LAST:event_jCbMedianaHActionPerformed
-
     private void jCbGrandeHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbGrandeHActionPerformed
          // TODO add your handling code here:
-        nump=(int) jCbGrandeH.getSelectedItem();
+       int nump;
+        nump = jCbGrandeH.getSelectedIndex();
          TotalHG = Grande*nump;
         CantidadHG=nump;
         total=+total+TotalHG;
-        CantidadTotal=CantidadTotal+CantidadHG;
+        CantidadTotal=+CantidadTotal+CantidadHG;
     }//GEN-LAST:event_jCbGrandeHActionPerformed
 
     private void jCbFamiliarHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbFamiliarHActionPerformed
          // TODO add your handling code here:
-        nump=(int) jCbFamiliarH.getSelectedItem();
+        int nump= jCbFamiliarH.getSelectedIndex();
         TotalHF=Familiar*nump;
         CantidadHF=nump;
         total=+total+TotalHF;
@@ -298,7 +309,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbMedianaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbMedianaMActionPerformed
          // TODO add your handling code here:
-        nump=(int) jCbMedianaM.getSelectedItem();
+        int nump= jCbMedianaM.getSelectedIndex();
         TotalMM=Mediana*nump;
         CantidadMM=nump;
         total=+total+TotalMM;
@@ -307,7 +318,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbGrandeMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbGrandeMActionPerformed
          // TODO add your handling code here:
-        nump=(int) jCbGrandeM.getSelectedItem();
+       int nump=jCbGrandeM.getSelectedIndex();
         TotalMG=Grande*nump;
         CantidadMG=nump;
         total=+total+TotalMG;
@@ -316,7 +327,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbFamiliarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbFamiliarMActionPerformed
          // TODO add your handling code here:
-        nump=(int) jCbFamiliarM.getSelectedItem();
+        int nump=jCbFamiliarM.getSelectedIndex();
         TotalMF=Familiar*nump;
         CantidadMF=nump;
         total=+total+TotalMF;
@@ -325,7 +336,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbMedianaPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbMedianaPActionPerformed
          // TODO add your handling code here:
-        nump=(int) jCbMedianaP.getSelectedItem();
+        int nump=jCbMedianaP.getSelectedIndex();
         TotalPM=Mediana*nump;
         CantidadPM=nump;
         total=+total+TotalPM;
@@ -334,7 +345,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbGrandePActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbGrandePActionPerformed
          // TODO add your handling code here:
-        nump=(int) jCbGrandeP.getSelectedItem();
+        int nump=jCbGrandeP.getSelectedIndex();
         TotalPG=Grande*nump;
         CantidadPG=nump;
         total=+total+TotalPG;
@@ -343,7 +354,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbFamiliarPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbFamiliarPActionPerformed
          // TODO add your handling code here:
-        nump=(int) jCbFamiliarP.getSelectedItem();
+        int nump=jCbFamiliarP.getSelectedIndex();
         TotalPF=Mediana*nump;
         CantidadPF=nump;
         total=+total+TotalPF;
@@ -352,7 +363,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void PapasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PapasActionPerformed
          // TODO add your handling code here:
-         nump=(int) Papas.getSelectedItem();
+         int nump=Papas.getSelectedIndex();
         TotalPapa=Papa*nump;
         CantidadPapa=nump;
         total=+total+TotalPapa;
@@ -360,7 +371,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_PapasActionPerformed
 
     private void jCbRefrescoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbRefrescoCActionPerformed
-        nump=(int) jCbRefrescoC.getSelectedItem();
+        int nump= jCbRefrescoC.getSelectedIndex();
         TotalCoca=Coca*nump;
         CantidadCoca=nump;
         total=+total+TotalCoca;
@@ -369,7 +380,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbRefrescoSpriteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbRefrescoSpriteActionPerformed
          // TODO add your handling code here:
-         nump=(int) jCbRefrescoSprite.getSelectedItem();
+       int  nump=jCbRefrescoSprite.getSelectedIndex();
         TotalSprite=Sprite*nump;
         CantidadSprite=nump;
         total=+total+TotalSprite;
@@ -378,12 +389,35 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbRefrescoManzanitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbRefrescoManzanitaActionPerformed
          // TODO add your handling code here:
-         nump=(int) jCbRefrescoManzanita.getSelectedItem();
+       int  nump=jCbRefrescoManzanita.getSelectedIndex();
         TotalManzanita=Manzanita*nump;
         CantidadManzanita=nump;
         total=+total+TotalManzanita;
         CantidadTotal=CantidadTotal+CantidadManzanita;
     }//GEN-LAST:event_jCbRefrescoManzanitaActionPerformed
+
+    private void jCbGrandeHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCbGrandeHMouseClicked
+        // TODO add your handling code here
+    }//GEN-LAST:event_jCbGrandeHMouseClicked
+
+    private void SalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalidaActionPerformed
+        // TODO add your handling code here:
+        System.out.println("el valor es: "+CantidadTotal);
+    }//GEN-LAST:event_SalidaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Salida.setText("Cantidad total "+CantidadTotal);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jCbMedianaHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbMedianaHActionPerformed
+         // TODO add your handling code here:
+         int  nump=jCbMedianaH.getSelectedIndex();
+         TotalHM=Mediana*nump;
+        CantidadHM=nump;
+        total=+total+TotalHM;
+        CantidadTotal=CantidadTotal+CantidadHM;
+    }//GEN-LAST:event_jCbMedianaHActionPerformed
 
     /**
      * @param args the command line arguments
@@ -423,6 +457,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Papas;
+    private javax.swing.JTextField Salida;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
