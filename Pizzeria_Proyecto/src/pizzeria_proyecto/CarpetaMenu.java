@@ -5,7 +5,6 @@
  */
 package pizzeria_proyecto;
 
-import javax.swing.JSpinner;
 import javax.swing.JTextField;
 
 /**
@@ -32,6 +31,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
             ,CantidadCoca=0, CantidadSprite=0, CantidadManzanita=0, CantidadPapas=0,TotalHM=0,TotalHG=0
             ,TotalHF=0,TotalMM=0,TotalMG=0,TotalMF=0,TotalM=0,TotalPM=0,TotalPG=0,TotalPF=0,TotalPapa=0,CantidadPapa=0
             ,Papa=30,TotalCoca=0,Coca=20,TotalSprite=0,Sprite=18,TotalManzanita=0,Manzanita=15;
+    String PizzaHM=null,PizzaHG=null, PizzaHF=null;
     
     
     @SuppressWarnings("unchecked")
@@ -61,9 +61,9 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jCbFamiliarP = new javax.swing.JComboBox<>();
         jCbGrandeP = new javax.swing.JComboBox<>();
         jCbMedianaP = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jBAceptar = new javax.swing.JButton();
+        jBCancelar = new javax.swing.JButton();
+        jBGenerarTiket = new javax.swing.JButton();
         Papas = new javax.swing.JComboBox<>();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
@@ -191,19 +191,24 @@ public class CarpetaMenu extends javax.swing.JFrame {
         });
         jPanel4.add(jCbMedianaP, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, -1, -1));
 
-        jButton1.setText("Aceptar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBAceptar.setText("Aceptar");
+        jBAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBAceptarActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
+        jPanel4.add(jBAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
 
-        jButton2.setText("Cancelar");
-        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, -1, -1));
+        jBCancelar.setText("Cancelar");
+        jPanel4.add(jBCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, -1, -1));
 
-        jButton3.setText("Generar Ticket");
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
+        jBGenerarTiket.setText("Generar Ticket");
+        jBGenerarTiket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBGenerarTiketActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jBGenerarTiket, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
         Papas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "1", "2", "3", "4" }));
         Papas.addActionListener(new java.awt.event.ActionListener() {
@@ -296,6 +301,9 @@ public class CarpetaMenu extends javax.swing.JFrame {
         CantidadHG=nump;
         total=+total+TotalHG;
         CantidadTotal=+CantidadTotal+CantidadHG;
+        if(nump>0)
+            //es para saber el nombre del producto si no se comopro nada no se asigna nada
+            PizzaHM=("Pizza Hawaiana Mediana");
     }//GEN-LAST:event_jCbGrandeHActionPerformed
 
     private void jCbFamiliarHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbFamiliarHActionPerformed
@@ -305,6 +313,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         CantidadHF=nump;
         total=+total+TotalHF;
         CantidadTotal=CantidadTotal+CantidadHF;
+        PizzaHG=("Pizza Hawaiana Grande");
     }//GEN-LAST:event_jCbFamiliarHActionPerformed
 
     private void jCbMedianaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbMedianaMActionPerformed
@@ -314,6 +323,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         CantidadMM=nump;
         total=+total+TotalMM;
         CantidadTotal=CantidadTotal+CantidadMM;
+        PizzaHF=("Pizza Hawaiana Familiar");
     }//GEN-LAST:event_jCbMedianaMActionPerformed
 
     private void jCbGrandeMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbGrandeMActionPerformed
@@ -405,10 +415,10 @@ public class CarpetaMenu extends javax.swing.JFrame {
         System.out.println("el valor es: "+CantidadTotal);
     }//GEN-LAST:event_SalidaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jBAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAceptarActionPerformed
         // TODO add your handling code here:
         Salida.setText("Cantidad total "+CantidadTotal);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jBAceptarActionPerformed
 
     private void jCbMedianaHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbMedianaHActionPerformed
          // TODO add your handling code here:
@@ -418,6 +428,13 @@ public class CarpetaMenu extends javax.swing.JFrame {
         total=+total+TotalHM;
         CantidadTotal=CantidadTotal+CantidadHM;
     }//GEN-LAST:event_jCbMedianaHActionPerformed
+
+    private void jBGenerarTiketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGenerarTiketActionPerformed
+         // TODO add your handling code here:
+         this.setVisible(false);
+        TicketMostrador newFrame= new TicketMostrador();
+        newFrame.setVisible(true);
+    }//GEN-LAST:event_jBGenerarTiketActionPerformed
 
     /**
      * @param args the command line arguments
@@ -458,9 +475,9 @@ public class CarpetaMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Papas;
     private javax.swing.JTextField Salida;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jBAceptar;
+    private javax.swing.JButton jBCancelar;
+    private javax.swing.JButton jBGenerarTiket;
     private javax.swing.JComboBox<String> jCbFamiliarH;
     private javax.swing.JComboBox<String> jCbFamiliarM;
     private javax.swing.JComboBox<String> jCbFamiliarP;

@@ -5,17 +5,24 @@
  */
 package pizzeria_proyecto;
 
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author snakt
  */
 public class TicketMostrador extends javax.swing.JFrame {
-
+    DefaultTableModel modelo;
     /**
      * Creates new form Ticket
      */
+    CarpetaMenu pro= new CarpetaMenu();
+    
     public TicketMostrador() {
         initComponents();
+        String Cabecera[]={"Productos","Cantidad","Precio"};
+        String Datos[][]={};
+        modelo= new DefaultTableModel(Datos,Cabecera);
+        jTTiket.setModel(modelo);
     }
 
     /**
@@ -28,7 +35,7 @@ public class TicketMostrador extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTTiket = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jTextFieldFolio = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -41,11 +48,12 @@ public class TicketMostrador extends javax.swing.JFrame {
         jButtonCancelar = new javax.swing.JButton();
         jButtonLimpiar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jBGenerar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTTiket.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null}
             },
@@ -53,10 +61,10 @@ public class TicketMostrador extends javax.swing.JFrame {
                 "Productos", "Cantidad", "Precio"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane1.setViewportView(jTTiket);
+        if (jTTiket.getColumnModel().getColumnCount() > 0) {
+            jTTiket.getColumnModel().getColumn(1).setResizable(false);
+            jTTiket.getColumnModel().getColumn(2).setResizable(false);
         }
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 450, 80));
@@ -67,6 +75,12 @@ public class TicketMostrador extends javax.swing.JFrame {
 
         jLabel2.setText("Nombre del Cliente");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, -1, -1));
+
+        jTextFieldnomCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldnomClienteActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextFieldnomCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 170, -1));
         getContentPane().add(jTextFieldPrecioT, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 70, -1));
 
@@ -89,9 +103,29 @@ public class TicketMostrador extends javax.swing.JFrame {
         getContentPane().add(jButtonLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, -1, -1));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, 20, 20));
 
+        jBGenerar.setText("Generar");
+        jBGenerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBGenerarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBGenerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextFieldnomClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldnomClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldnomClienteActionPerformed
+
+    private void jBGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGenerarActionPerformed
+        // TODO add your handling code here:
+        /*String Pro;
+        Pro = pro.PizzaHF;
+        Object jTTiket[]={Pro};
+        modelo.addRow(jTTiket);*/
+    }//GEN-LAST:event_jBGenerarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +164,7 @@ public class TicketMostrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBGenerar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonLimpiar;
     private javax.swing.JButton jButtonPagar;
@@ -138,7 +173,7 @@ public class TicketMostrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTTiket;
     private javax.swing.JTextField jTextFieldFecha;
     private javax.swing.JTextField jTextFieldFolio;
     private javax.swing.JTextField jTextFieldHora;
