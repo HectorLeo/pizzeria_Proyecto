@@ -15,6 +15,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -28,6 +29,7 @@ public class PedidoTelefono extends javax.swing.JFrame {
      */
     public PedidoTelefono() {
         initComponents();
+        MostrarProdu();
     }
 
     /**
@@ -73,6 +75,8 @@ public class PedidoTelefono extends javax.swing.JFrame {
              } catch (SQLException ex) {
             Logger.getLogger(PedidoTelefono.class.getName()).log(Level.SEVERE, null, ex);
         }  
+        
+        
     
     }
     
@@ -91,6 +95,47 @@ public class PedidoTelefono extends javax.swing.JFrame {
         return veri.length() <= 0;
        }
     
+    public ResultSet SeleccionarProdu(){
+    Statement st;
+    ResultSet rs=null;
+        try {
+            st=cn.createStatement();
+            rs=st.executeQuery("Select * from ptelefono");
+        } catch (SQLException ex) {
+            Logger.getLogger(PedidoTelefono.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return rs;
+    }
+    
+    
+    public void MostrarProdu(){
+    JTable tabla;
+    ResultSet rs;
+    DefaultTableModel dfm=new DefaultTableModel (){
+    
+    public boolean isCellEditable(int fila, int columna){
+    return false;
+      }
+    };
+    
+    tabla=this.tabla;
+    tabla.setModel(dfm);
+    dfm.setColumnIdentifiers(new Object[] {"Id","NombreCliente", "Telefono", "Direccion"});
+    rs=SeleccionarProdu();
+    
+    try {
+        while(rs.next()){
+            dfm.addRow(new Object[] {rs.getString("Id"), rs.getString("NombreC"), rs.getString("Telefono"), rs.getString("Direccion")});
+        }   
+    } catch (SQLException ex) {
+            Logger.getLogger(PedidoTelefono.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    
+    
+   }
+    
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -100,8 +145,6 @@ public class PedidoTelefono extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTableDtelefono = new javax.swing.JTable();
         jTextFieldNombreCliente = new javax.swing.JTextField();
         jTextFieldTelefono = new javax.swing.JTextField();
         jTextFieldDireccion = new javax.swing.JTextField();
@@ -111,6 +154,8 @@ public class PedidoTelefono extends javax.swing.JFrame {
         jButtonMenu = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jTextFielID = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tabla = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -124,21 +169,23 @@ public class PedidoTelefono extends javax.swing.JFrame {
         jLabel3.setText("Dirección");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 143, -1, -1));
 
-        jTableDtelefono.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
+        jTextFieldNombreCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreClienteActionPerformed(evt);
             }
-        ));
-        jScrollPane2.setViewportView(jTableDtelefono);
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 193, 422, 100));
+        });
         getContentPane().add(jTextFieldNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 51, 210, -1));
+
+        jTextFieldTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldTelefonoActionPerformed(evt);
+            }
+        });
+        jTextFieldTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldTelefonoKeyTyped(evt);
+            }
+        });
         getContentPane().add(jTextFieldTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 91, 148, -1));
         getContentPane().add(jTextFieldDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 140, 210, -1));
 
@@ -156,9 +203,24 @@ public class PedidoTelefono extends javax.swing.JFrame {
         getContentPane().add(jButtonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 352, -1, -1));
 
         jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonCancelarMouseClicked(evt);
+            }
+        });
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 352, -1, -1));
 
         jButtonRegresar.setText("Regresar");
+        jButtonRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegresarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 352, -1, -1));
 
         jButtonMenu.setText("Menú");
@@ -172,8 +234,24 @@ public class PedidoTelefono extends javax.swing.JFrame {
         jLabel4.setText("ID");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
 
+        jTextFielID.setEditable(false);
         jTextFielID.setEnabled(false);
         getContentPane().add(jTextFielID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 40, -1));
+
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane3.setViewportView(tabla);
+
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 460, 120));
 
         pack();
         setLocationRelativeTo(null);
@@ -239,6 +317,7 @@ public class PedidoTelefono extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(PedidoTelefono.class.getName()).log(Level.SEVERE, null, ex);
         }
+
         
         
     }//GEN-LAST:event_jButtonAceptarMouseClicked
@@ -249,6 +328,43 @@ public class PedidoTelefono extends javax.swing.JFrame {
         CarpetaMenu newFrame= new CarpetaMenu();
         newFrame.setVisible(true);
     }//GEN-LAST:event_jButtonMenuActionPerformed
+
+    private void jTextFieldNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNombreClienteActionPerformed
+
+    private void jButtonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Pedidos newFrame= new Pedidos();
+        newFrame.setVisible(true);
+    }//GEN-LAST:event_jButtonRegresarActionPerformed
+
+    private void jTextFieldTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldTelefonoActionPerformed
+
+    private void jTextFieldTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoKeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar();
+        if(Character.isLetter(c)){
+            getToolkit().beep();
+            evt.consume();           
+              JOptionPane.showMessageDialog(null, "El campo Telefono solo acepta numeros");
+        }
+    }//GEN-LAST:event_jTextFieldTelefonoKeyTyped
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
+
+    private void jButtonCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCancelarMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Datos cancelados");
+        limpia_datos();
+        
+    }//GEN-LAST:event_jButtonCancelarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -295,12 +411,12 @@ public class PedidoTelefono extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTableDtelefono;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextFielID;
     private javax.swing.JTextField jTextFieldDireccion;
     private javax.swing.JTextField jTextFieldNombreCliente;
     private javax.swing.JTextField jTextFieldTelefono;
+    private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 
     ConexionDB cc= new ConexionDB();

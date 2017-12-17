@@ -29,6 +29,12 @@ public class PedidoMostrador extends javax.swing.JFrame {
         initComponents();
     }
     
+    void limpiar(){
+        
+        jTextFieldnomCliente.setText("");
+    }
+    
+    
     void mostrar_datos(){
   
     DefaultTableModel modelo = new DefaultTableModel();
@@ -69,6 +75,7 @@ public class PedidoMostrador extends javax.swing.JFrame {
         jButtonAceptar = new javax.swing.JButton();
         jTextFieldnomCliente = new javax.swing.JTextField();
         jButtonCancelar = new javax.swing.JButton();
+        jButtonRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,8 +98,25 @@ public class PedidoMostrador extends javax.swing.JFrame {
                 jTextFieldnomClienteActionPerformed(evt);
             }
         });
+        jTextFieldnomCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldnomClienteKeyTyped(evt);
+            }
+        });
 
         jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
+
+        jButtonRegresar.setText("Regresar");
+        jButtonRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,8 +133,10 @@ public class PedidoMostrador extends javax.swing.JFrame {
                         .addGap(73, 73, 73)
                         .addComponent(jButtonAceptar)
                         .addGap(55, 55, 55)
-                        .addComponent(jButtonCancelar)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addComponent(jButtonCancelar)
+                        .addGap(49, 49, 49)
+                        .addComponent(jButtonRegresar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +148,8 @@ public class PedidoMostrador extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAceptar)
-                    .addComponent(jButtonCancelar))
+                    .addComponent(jButtonCancelar)
+                    .addComponent(jButtonRegresar))
                 .addGap(24, 24, 24))
         );
 
@@ -136,9 +163,7 @@ public class PedidoMostrador extends javax.swing.JFrame {
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        CarpetaMenu newFrame= new CarpetaMenu();
-        newFrame.setVisible(true);
+        
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
     private void jButtonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMouseClicked
@@ -156,17 +181,13 @@ public class PedidoMostrador extends javax.swing.JFrame {
                
                 JOptionPane.showMessageDialog(null, "ID vacio");         
             }                 
-            else */if(jTextFieldnomCliente.getText().length()==0)
-            {                
+            else */if(jTextFieldnomCliente.getText().length()==0){      
+                
                 pps.setString(1, jTextFieldnomCliente.getText());
                 //Error.setVisible(true);
                 //Error.setText("Campo clave producto vacio");
                 JOptionPane.showMessageDialog(null, "Nombre vacio");
-            }     
-            
-            
-            
-            else{
+            }else{
                         //pps.setString(1, Id.getText()); 
                         pps.setString(1, jTextFieldnomCliente.getText()); 
                         
@@ -181,7 +202,34 @@ public class PedidoMostrador extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(PedidoMostrador.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }//GEN-LAST:event_jButtonAceptarMouseClicked
+
+    private void jButtonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Pedidos newFrame= new Pedidos();
+        newFrame.setVisible(true);
+    }//GEN-LAST:event_jButtonRegresarActionPerformed
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Nombre cancelado");
+        limpiar();
+        
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
+
+    private void jTextFieldnomClienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldnomClienteKeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar();
+        if(Character.isDigit(c)){
+            getToolkit().beep();
+            evt.consume();           
+              JOptionPane.showMessageDialog(null, "El campo Nombre solo acepta Letras");
+        }
+        
+        
+    }//GEN-LAST:event_jTextFieldnomClienteKeyTyped
 
     /**
      * @param args the command line arguments
@@ -221,6 +269,7 @@ public class PedidoMostrador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAceptar;
     private javax.swing.JButton jButtonCancelar;
+    private javax.swing.JButton jButtonRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextFieldnomCliente;
     // End of variables declaration//GEN-END:variables
