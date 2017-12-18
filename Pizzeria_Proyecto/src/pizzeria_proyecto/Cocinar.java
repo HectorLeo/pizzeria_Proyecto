@@ -5,12 +5,6 @@
  */
 package pizzeria_proyecto;
 
-import clases.Cargar;
-import static java.awt.SystemColor.menu;
-import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author snakt
@@ -20,75 +14,12 @@ public class Cocinar extends javax.swing.JFrame {
     /**
      * Creates new form Cocinar
      */
-    Cargar hilo;
-   
-    Thread cronometro;
-    
     public Cocinar() {
         initComponents();
-        iniciar();
-    }
-
-     public void iniciar() {
-       
-        hilo.start();
-     
-     }
-    
-     
-    public void Cocinar(){
-        this.cronometro = new Thread(){
-          public void run() {
-                int hor = 0, min = 0, seg = 0;
-                for (;;) {
-                    try {
-                        //System.out.println(hor+":"+min+":"+seg);
-                        seg++;
-                        if (seg > 59) {
-                            seg = 0;
-                            min++;
-                        }
-                        if (min > 59) {
-                            seg = 0;
-                            min = 0;
-                            hor++;
-                        }
-                        int cont = 0;
-                        int filas = datosTable2.getRowCount();
-                        if (seg == 10) {
-                            int fila = datosTable2.getSelectedRow();
-                            datosTable2.getSelectedRow();
-                            DefaultTableModel model = (DefaultTableModel) datosTable2.getModel();
-                            model.removeRow(fila);
-                            dispose();
-                            lblTime.resetKeyboardActions();
-                            lblTime.setText(String.valueOf("0"));
-                            seg = 0;
-                            cont = cont + 1;
-                        }
-                        if (cont == filas) {
-                            JOptionPane.showMessageDialog(null, "Pedido listo para entregar a la mesa.");
-                            break;
-                        }
-
-                        lblTime.setText(hor + ":" + min + ":" + seg);
-                        Thread.sleep(999);
-                    } catch (InterruptedException e) {
-                    }
-                }
-            }  
-            
-        };
-        
     }
     
     
-    
-    CarpetaMenu menu = new CarpetaMenu();
-    int m = menu.CantidadHM;
-    
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -98,91 +29,21 @@ public class Cocinar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblTime = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        datosTable2 = new javax.swing.JTable();
-        Cocinar = new javax.swing.JButton();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        lblTime.setText("00:00:00");
-
-        datosTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(datosTable2);
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(55, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        Cocinar.setText("cocinar");
-        Cocinar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CocinarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTime, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cocinar))
-                .addContainerGap(125, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(lblTime, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Cocinar)))
-                .addContainerGap(28, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CocinarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CocinarActionPerformed
-        // TODO add your handling code here:
-        int filas = datosTable2.getRowCount();
-
-        cronometro.start();
-    }//GEN-LAST:event_CocinarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,10 +81,5 @@ public class Cocinar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Cocinar;
-    private javax.swing.JTable datosTable2;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblTime;
     // End of variables declaration//GEN-END:variables
 }

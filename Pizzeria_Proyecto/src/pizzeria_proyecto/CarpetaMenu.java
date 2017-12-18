@@ -500,7 +500,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
     private void jBCocinarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCocinarActionPerformed
          // TODO add your handling code here:
         this.setVisible(false);
-        Cocinar newFrame= new Cocinar();
+        Cocinar  newFrame= new Cocinar();
         newFrame.setVisible(true);
     }//GEN-LAST:event_jBCocinarActionPerformed
 
