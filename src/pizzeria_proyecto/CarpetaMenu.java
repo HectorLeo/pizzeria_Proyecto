@@ -91,6 +91,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -316,7 +317,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jPanel5.add(jCbRefrescoManzanita, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 240, -1, -1));
 
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ImgPizza/Manzanita.png"))); // NOI18N
-        jPanel5.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 10, -1, -1));
+        jPanel5.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, -1, -1));
 
         jLabel44.setText("Manzana Lift");
         jPanel5.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 240, -1, -1));
@@ -332,6 +333,9 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
         jLabel21.setText("$20");
         jPanel5.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
+
+        jLabel22.setText("hgjujhdfhx");
+        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, -1, -1));
 
         jTabbedPane2.addTab("Refrescos", jPanel5);
 
@@ -552,6 +556,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
