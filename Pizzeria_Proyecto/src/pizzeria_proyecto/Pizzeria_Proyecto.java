@@ -20,6 +20,7 @@ public class Pizzeria_Proyecto {
         miVentana.setVisible(true);
         miVentana.setEnabled(true);
         System.out.println("Hola");
+        System.out.println("asdnhjakls");
     }
     
 }
