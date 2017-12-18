@@ -130,12 +130,8 @@ public class PedidoTelefono extends javax.swing.JFrame {
     } catch (SQLException ex) {
             Logger.getLogger(PedidoTelefono.class.getName()).log(Level.SEVERE, null, ex);
     }
-    
-    
-    
+     
    }
-    
-    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

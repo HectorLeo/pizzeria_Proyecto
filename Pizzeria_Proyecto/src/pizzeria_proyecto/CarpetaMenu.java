@@ -94,7 +94,7 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jCbMedianaP = new javax.swing.JComboBox<>();
         jBAceptar = new javax.swing.JButton();
         jBCancelar = new javax.swing.JButton();
-        jBGenerarTiket = new javax.swing.JButton();
+        jBCocinar = new javax.swing.JButton();
         Salida = new javax.swing.JTextField();
         jCbMedianaH = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
@@ -242,13 +242,13 @@ public class CarpetaMenu extends javax.swing.JFrame {
         jBCancelar.setText("Cancelar");
         jPanel4.add(jBCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, -1, -1));
 
-        jBGenerarTiket.setText("Generar Ticket");
-        jBGenerarTiket.addActionListener(new java.awt.event.ActionListener() {
+        jBCocinar.setText("Cocinar Pizzas");
+        jBCocinar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBGenerarTiketActionPerformed(evt);
+                jBCocinarActionPerformed(evt);
             }
         });
-        jPanel4.add(jBGenerarTiket, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
+        jPanel4.add(jBCocinar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
         Salida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -489,20 +489,20 @@ public class CarpetaMenu extends javax.swing.JFrame {
 
     private void jCbMedianaHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCbMedianaHActionPerformed
          // TODO add your handling code here:
-         int  nump=jCbMedianaH.getSelectedIndex();
-         TotalHM=Mediana*nump;
+        int  nump=jCbMedianaH.getSelectedIndex();
+        TotalHM=Mediana*nump;
         CantidadHM=nump;
         total=+total+TotalHM;
         CantidadTotal=CantidadTotal+CantidadHM;
         PizzaHM=("Pizza Hawaiana Mediana");
     }//GEN-LAST:event_jCbMedianaHActionPerformed
 
-    private void jBGenerarTiketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGenerarTiketActionPerformed
+    private void jBCocinarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCocinarActionPerformed
          // TODO add your handling code here:
-         this.setVisible(false);
-        TicketMostrador newFrame= new TicketMostrador();
+        this.setVisible(false);
+        Cocinar newFrame= new Cocinar();
         newFrame.setVisible(true);
-    }//GEN-LAST:event_jBGenerarTiketActionPerformed
+    }//GEN-LAST:event_jBCocinarActionPerformed
 
     private void PapasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PapasActionPerformed
         // TODO add your handling code here:
@@ -551,23 +551,23 @@ public class CarpetaMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> Papas;
+    public javax.swing.JComboBox<String> Papas;
     private javax.swing.JTextField Salida;
     private javax.swing.JButton jBAceptar;
     private javax.swing.JButton jBCancelar;
-    private javax.swing.JButton jBGenerarTiket;
-    private javax.swing.JComboBox<String> jCbFamiliarH;
-    private javax.swing.JComboBox<String> jCbFamiliarM;
-    private javax.swing.JComboBox<String> jCbFamiliarP;
-    private javax.swing.JComboBox<String> jCbGrandeH;
-    private javax.swing.JComboBox<String> jCbGrandeM;
-    private javax.swing.JComboBox<String> jCbGrandeP;
-    private javax.swing.JComboBox<String> jCbMedianaH;
-    private javax.swing.JComboBox<String> jCbMedianaM;
-    private javax.swing.JComboBox<String> jCbMedianaP;
-    private javax.swing.JComboBox<String> jCbRefrescoC;
-    private javax.swing.JComboBox<String> jCbRefrescoManzanita;
-    private javax.swing.JComboBox<String> jCbRefrescoSprite;
+    private javax.swing.JButton jBCocinar;
+    public javax.swing.JComboBox<String> jCbFamiliarH;
+    public javax.swing.JComboBox<String> jCbFamiliarM;
+    public javax.swing.JComboBox<String> jCbFamiliarP;
+    public javax.swing.JComboBox<String> jCbGrandeH;
+    public javax.swing.JComboBox<String> jCbGrandeM;
+    public javax.swing.JComboBox<String> jCbGrandeP;
+    public javax.swing.JComboBox<String> jCbMedianaH;
+    public javax.swing.JComboBox<String> jCbMedianaM;
+    public javax.swing.JComboBox<String> jCbMedianaP;
+    public javax.swing.JComboBox<String> jCbRefrescoC;
+    public javax.swing.JComboBox<String> jCbRefrescoManzanita;
+    public javax.swing.JComboBox<String> jCbRefrescoSprite;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
