@@ -5,6 +5,14 @@
  */
 package pizzeria_proyecto;
 
+import BDD.ConexionDB;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 /**
  *
@@ -24,7 +32,46 @@ public class TicketMostrador extends javax.swing.JFrame {
         modelo= new DefaultTableModel(Datos,Cabecera);
         jTTiket.setModel(modelo);
     }
-
+    
+    public ResultSet SeleccionarProdu(){
+    Statement st;
+    ResultSet rs=null;
+        try {
+            st=cn.createStatement();
+            rs=st.executeQuery("Select * from menu");
+        } catch (SQLException ex) {
+            Logger.getLogger(PedidoTelefono.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return rs;
+    }
+    
+    
+    public void MostrarProdu(){
+    JTable tabla;
+    ResultSet rs;
+    DefaultTableModel dfm=new DefaultTableModel (){
+    
+    public boolean isCellEditable(int fila, int columna){
+    return false;
+      }
+    };
+    
+    tabla=this.jTTiket;
+    tabla.setModel(dfm);
+    dfm.setColumnIdentifiers(new Object[] {"Producghjklñtos","Cantidad", "Precio"});
+    rs=SeleccionarProdu();
+    
+    try {
+        while(rs.next()){
+            dfm.addRow(new Object[] {rs.getString("PizzaHM"), rs.getString("PizzaHG"), rs.getString("PizzaHF")});
+        }   
+    } catch (SQLException ex) {
+            Logger.getLogger(TicketMostrador.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    
+    
+   }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,19 +102,15 @@ public class TicketMostrador extends javax.swing.JFrame {
 
         jTTiket.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null}
+                {}
             },
             new String [] {
-                "Productos", "Cantidad", "Precio"
+
             }
         ));
         jScrollPane1.setViewportView(jTTiket);
-        if (jTTiket.getColumnModel().getColumnCount() > 0) {
-            jTTiket.getColumnModel().getColumn(1).setResizable(false);
-            jTTiket.getColumnModel().getColumn(2).setResizable(false);
-        }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 450, 80));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 450, 80));
 
         jLabel1.setText("Folio");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
@@ -207,4 +250,7 @@ public class TicketMostrador extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldPrecioT;
     private javax.swing.JTextField jTextFieldnomCliente;
     // End of variables declaration//GEN-END:variables
+    
+    ConexionDB cc= new ConexionDB();
+    Connection cn= cc.conexion();
 }
