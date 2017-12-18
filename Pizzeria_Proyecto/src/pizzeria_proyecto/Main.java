@@ -18,7 +18,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
-        this.getContentPane().setBackground(Color.BLACK);
+        //this.getContentPane().setBackground(Color.BLACK);
     }
 
     /**
